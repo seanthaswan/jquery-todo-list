@@ -5,6 +5,13 @@ body {
   margin: 0;
 }
 
+img {
+	width: auto;
+	height: 100px;
+	position:relative;
+	top:25px;
+}
+
 div {
   background: white;
 }
@@ -46,19 +53,28 @@ form {
 	width:190px;
 }
 
-#add-box:hover {
-	cursor:pointer;
+#add-button:hover {
+	border: 4px solid rgba(2,136,209 ,1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
+}
+
+#form-box:hover:focus {
+	border: 4px solid rgba(2,136,209 ,1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
 }
 
 input {
   padding: 20px;
-  border: 4px solid rgba(0, 0, 0, .4);
+  border: 4px solid rgba(0, 0, 0, .6);
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
   margin: 0 5px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-align:center;
+  cursor: pointer;
 }
 
 ul {
