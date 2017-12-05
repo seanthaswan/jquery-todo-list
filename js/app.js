@@ -7,8 +7,8 @@ $(document).ready(function() {
   var complete = $("ul#complete");
   var addButton = $("#add-button");
   var form = $("#form");
-  var notDoneItem = $("#not-done-item");
-  var doneItem = $("#done-item");
+  var notDoneItem = $(".not-done-item");
+  var doneItem = $(".done-item");
   var formBox = $("#form-box");
   var placeholderNotDone = $(".placeholder1");
   var placeholderDone = $(".placeholder2");
@@ -17,7 +17,7 @@ $(document).ready(function() {
   form.submit(function(e) {
     e.preventDefault();
     var listItem = $("#form-box").val();
-    incomplete.append("<li id='not-done-item'>" + listItem + "</li>");
+    incomplete.append("<li class='not-done-item'>" + listItem + "</li>");
     formBox.val("");
     placeholderNotDone.remove();
     form.focus();
@@ -26,7 +26,7 @@ $(document).ready(function() {
   //Add to (div).todo's (ul).incomplete list
   addButton.click(function() {
     var listItem = $("#form-box").val();
-    incomplete.append("<li id='not-done-item'>" + listItem + "</li>");
+    incomplete.append("<li class='not-done-item'>" + listItem + "</li>");
     formBox.val("");
     placeholderNotDone.remove();
   });
@@ -34,7 +34,7 @@ $(document).ready(function() {
   // On click move to complete
   incomplete.on("click", "li", function() {
     var listItem = $(this).html();
-    complete.append("<li id='done-item'>" + listItem + "</li>");
+    complete.append("<li class='done-item'>" + listItem + "</li>");
     placeholderDone.remove();
     $('li').wrap("<strike></strike>");
     this.remove();
