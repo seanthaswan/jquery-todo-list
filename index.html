@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>To-Do List!</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Raleway" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="wrapper">
+    <h1 id="title">VICTORY LIST</h1>
+    <p>Win your day and click to complete!</p>
+    <form id="form">
+      <input id="form-box" type="text" name="" value="" placeholder="What needs to get done?">
+      <input id="add-button" type="button" name="" value="Add to list!">
+    </form>
+    <div class="container todo">
+      <h1>To get done!</h1>
+      <ul id="incomplete">
+      </ul>
+      <ul class="placeholder placeholder1">
+        <li>...Laundry</li>
+        <li>Dance dance dance!</li>
+        <li>Practice yoga inversions...</li>
+      </ul class="placeholder placeholder1">
+    </div>
+    <div class="container done">
+      <h1>Completed!</h1>
+      <ul id="complete">
+      </ul>
+      <ul class="placeholder placeholder2">
+        <li>...Deliverable</li>
+        <li>Worked out tuff</li>
+        <li>Mow the law...</li>
+      </ul class="placeholder placeholder2">
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="js/app.js" type="text/javascript"></script>
 </body>
+
 </html>
