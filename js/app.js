@@ -35,14 +35,15 @@ $(document).ready(function() {
   incomplete.on("click", "li", function() {
     var listItem = $(this).html();
     complete.append("<li id='done-item'>" + listItem + "</li>");
-    this.remove();
     placeholderDone.remove();
+    $('li').wrap("<strike></strike>");
+    this.remove();
   });
 
   // Remove from site
   complete.on("click", "li", function() {
-  	var listItem = $(this).html();
-  	this.remove();
+    var listItem = $(this).html();
+    this.remove();
   });
 
 
